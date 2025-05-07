@@ -70,7 +70,7 @@ class LinuxDoBrowser:
         # )
         # self.page.click(".login-button .d-button-label")
         self.page.goto(LOGIN_URL)
-        time.sleep(2)
+        time.sleep(10)
         self.page.fill("#login-account-name", USERNAME)
         time.sleep(2)
         self.page.fill("#login-account-password", PASSWORD)
