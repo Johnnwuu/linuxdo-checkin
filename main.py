@@ -61,15 +61,15 @@ class LinuxDoBrowser:
 
     def login(self):
         logger.info("开始登录")
-        time.sleep(10)
-        credential_picker = self.page.locator('#credential_picker_container')
-        credential_picker.evaluate(
-            """(element) => {
-                element.style.display = 'none';
-            }"""
-        )
-        self.page.click(".login-button .d-button-label")
-        # self.page.goto(LOGIN_URL)
+        time.sleep(2)
+        # credential_picker = self.page.locator('#credential_picker_container')
+        # credential_picker.evaluate(
+        #     """(element) => {
+        #         element.style.display = 'none';
+        #     }"""
+        # )
+        # self.page.click(".login-button .d-button-label")
+        self.page.goto(LOGIN_URL)
         time.sleep(2)
         self.page.fill("#login-account-name", USERNAME)
         time.sleep(2)
